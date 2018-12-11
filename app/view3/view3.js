@@ -14,6 +14,6 @@ angular.module('myApp.view3', ['ngRoute'])
   $scope.second = 1;
   $scope.updateValue = function() {
     $scope.calculation = $scope.first + ' + '
-    alert('you clicked the button!');
+    alert('you clicked the button!'); 
   }
 }]);
