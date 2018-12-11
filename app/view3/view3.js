@@ -9,11 +9,10 @@ angular.module('myApp.view3', ['ngRoute'])
   });
 }])
 
-.controller('View3Ctrl', [function($scope) {
+.controller('View3Ctrl', ['$scope', function($scope) {
   $scope.first = 1;
   $scope.second = 1;
   $scope.updateValue = function() {
-    $scope.calculation = $scope.first + ' + '
-    alert('you clicked the button!'); 
+    $scope.calculation = $scope.first + ' + ' + $scope.second + ' = ' + (+$scope.first + +$scope.second);
   }
 }]);

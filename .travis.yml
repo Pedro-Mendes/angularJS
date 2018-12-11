@@ -17,3 +17,4 @@ install:
 script:
   - npm run test-single-run -- --browsers ChromeHeadless
   - (npm start > /dev/null &) && npm run protractor -- --capabilities.chromeOptions.args headless
+
