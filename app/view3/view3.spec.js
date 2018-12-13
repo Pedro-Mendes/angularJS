@@ -6,7 +6,7 @@ describe('myApp.view3 module', function() {
 
   describe('view3 controller', function(){
 
-    it('should ....', inject(function($controller) {
+    it('should ....', inject(function($controller, $rootScope) {
       //spec body
       var view3Ctrl = $controller('View3Ctrl');
       expect(view3Ctrl).toBeDefined();
