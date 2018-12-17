@@ -1,16 +1,23 @@
 'use strict';
 
 describe('myApp.view3 module', function() {
-
-  beforeEach(module('myApp.view3'));
+  var view3Ctrl, myScope;
+  beforeEach(function() {
+    module('myApp.view3');
+    inject(function($controller, $rootScope) {
+      myScope = $rootScope.$new();
+      view3Ctrl = $controller('View3Ctrl', {
+          $scope: myScope
+      });
+    });
+  });
 
   describe('view3 controller', function(){
 
-    it('should ....', inject(function($controller, $rootScope) {
+    it('should ....', function() {
       //spec body
-      var view3Ctrl = $controller('View3Ctrl');
       expect(view3Ctrl).toBeDefined();
-    }));
+    });
 
   });
 });
